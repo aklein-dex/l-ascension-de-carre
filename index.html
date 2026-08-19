@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'ascension de Carré - Livre Interactif D&D</title>
+  <meta name="description"
+    content="Un livre interactif Dungeons & Dragons animé par Turn.js racontant l'ascension du dragon Carré.">
+  <link rel="stylesheet" href="style.css">
+  <!-- jQuery & Turn.js Libraries -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+</head>
+
+<body>
+
+  <div class="app-container">
+
+    <!-- Title Header -->
+    <header class="header-title">
+      <h1>L'ascension de Carré</h1>
+      <p>Chronique des Donjons & Dragons</p>
+    </header>
+
+    <!-- Book Flipbook Container -->
+    <div class="book-wrapper">
+      <div id="flipbook">
+
+        <!-- COVER (Page 1) -->
+        <div class="hard cover">
+          <div class="cover-content">
+            <div class="cover-header">
+              <div class="cover-subtitle">Donjons & Dragons</div>
+              <h2 class="cover-title">L'ascension<br>de Carré</h2>
+            </div>
+            <div class="cover-image-container">
+              <img src="images/dragon.jpg" alt="Dragon Carré - Cover Art">
+            </div>
+            <div class="cover-footer">
+              ✦ Grimoire Héroïque ✦
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 2: DRAGON PICTURE (Left Side of First Spread) -->
+        <div class="page">
+          <div class="page-inner illustration-page">
+            <div class="artwork-frame">
+              <img src="images/chapter-01.png" alt="La rencontre du nain">
+            </div>
+            <div class="artwork-caption">
+              Fig. 1 — La découverte des pages magiques
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 3: DRAGON TEXT (Right Side of First Spread) -->
+        <div class="page">
+          <div class="page-inner text-page">
+            <div class="chapter-header">
+              <div class="chapter-number">Chapitre I</div>
+              <h3 class="chapter-title">La Page de l'Archiviste</h3>
+            </div>
+            <div class="story-content">
+              <p class="line-highlight">C’est l’histoire d’un groupe d’aventuriers composé d’un druide, d’un moine
+                tabaxi et d’un paladin forgelier.</p>
+              <p class="line-highlight">Récemment trahis par leur quatrième compagnon et privés de leur licence
+                d’aventurier, nos héros cherchèrent désormais à retrouver gloire et honneur.</p>
+              <p class="line-highlight">Carré, le druide, gardait espoir et se montrait prêt à accepter n’importe quelle
+                mission pour prouver leur valeur. Minwu, le moine tabaxi, discret et vigilant, restait constamment à
+                l’affût
+                de la moindre rumeur pouvant déboucher sur un contrat. Quant à Ark'shamr, le paladin, il préfèrait
+                écumer
+                les tavernes et défier ses adversaires lors de tournois de bras de fer.</p>
+              <p class="line-highlight">Dès leur entrée dans une grotte menant à des souterrains, nos compagnons se
+                heurtèrent à des golems de pierre. Réalisant qu’ils se trouvaient dans un ancien repaire de nains, ils
+                enfoncèrent une porte et mirent la main sur d’étranges parchemins magiques.</p>
+              <p class="line-highlight">En effleurant ces écrits, le groupe fut frappé par de troublantes visions : des
+                images encore floues, mais où se distinguait clairement un puits.</p>
+              <p class="line-highlight">Reconnaissant les lieux entrevus, ils reprirent vaillamment la route, plus
+                déterminés que jamais à redorer leur blason. Ils ne repartirent d'ailleurs pas seuls : en plus des
+                parchemins, un nain aux multiples secrets s’est joint à leur périple.</p>
+            </div>
+            <div class="page-footer">
+              — I —
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 4: DUNGEON PICTURE (Left Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner illustration-page">
+            <div class="artwork-frame">
+              <img src="images/dungeon.jpg" alt="Illustration des Donjons Souterrains">
+            </div>
+            <div class="artwork-caption">
+              Fig. 2 — Le Dédale Souterrain des Ombres
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 5: DUNGEON TEXT (Right Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner text-page">
+            <div class="chapter-header">
+              <div class="chapter-number">Chapitre II</div>
+              <h3 class="chapter-title">Sur la Route de Silbhaj</h3>
+            </div>
+            <div class="story-content">
+              <p class="line-highlight">Prenant la route plein sud, nos héros tombèrent dans un terrible guet-apens :
+                ils se retrouvèrent piégés au cœur d’une gigantesque bulle magique, assaillis de toutes parts par des
+                zombies. Après un rude affrontement, Ark'shmar fracassa un cercueil d’où il récupéra un puissant
+                artefact magique.</p>
+              <p class="line-highlight">Arrivés à la cité de Silbhaj, nos aventuriers achetèrent des chevaux afin de
+                rejoindre une caravane chargée du transport d'un précieux cristal. Mais le voyage ne fut pas de tout
+                repos : après une âpre bataille, et grâce à une ruse astucieuse de Carré faisant croire à un golem que
+                le cristal avait disparu, le groupe parvint enfin sain et sauf à Paris.</p>
+            </div>
+            <div class="page-footer">
+              — II —
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 6: DUNGEON PICTURE (Left Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner illustration-page">
+            <div class="artwork-frame">
+              <img src="images/dungeon.jpg" alt="Illustration des Donjons Souterrains">
+            </div>
+            <div class="artwork-caption">
+              Fig. 2 — Le Dédale Souterrain des Ombres
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 7: DUNGEON TEXT (Right Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner text-page">
+            <div class="chapter-header">
+              <div class="chapter-number">Chapitre III</div>
+              <h3 class="chapter-title">La Cité des Hérétiques</h3>
+            </div>
+            <div class="story-content">
+              <p class="line-highlight">À la grande cathédrale, le groupe consulta le grand prêtre pour découvrir
+                comment purifier la dépouille d'un dragon émettant des vapeurs toxiques verdâtres.</p>
+              <p class="line-highlight">Pris de fatigue, Minwu et ses compagnons gagnèrent une auberge pour y passer la
+                nuit, non sans remarquer qu'un étrange chien leur emboîtait le pas. Autour de quelques chopes fêtant la
+                livraison du cristal, la troupe scella une véritable amitié avec Kylian, leur compagnon nain.</p>
+              <p class="line-highlight">Le repos fut troublé au milieu de la nuit lorsque des tueurs tentèrent de
+                s'infiltrer dans leur chambre. Veillant au grain, Ark'shmar pulvérisa la porte d’un coup de poing
+                dévastateur pour neutraliser le premier assaillant.</p>
+              <p class="line-highlight">Carré et Minwu s'occupèrent du second et l'interrogèrent en échange de sa vie :
+                les tueurs avaient été envoyés par un certain Hulmin.</p>
+              <p class="line-highlight">Déterminés à lui demander des comptes, les aventuriers mirent la main sur
+                l'architecte du manoir d'Hulmin. Ce dernier leur fournit l'adresse exacte ainsi qu'un itinéraire dérobé
+                pour déjouer la surveillance de sa garde rapprochée.</p>
+            </div>
+            <div class="page-footer">
+              — III —
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 8: DUNGEON PICTURE (Left Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner illustration-page">
+            <div class="artwork-frame">
+              <img src="images/dungeon.jpg" alt="Illustration des Donjons Souterrains">
+            </div>
+            <div class="artwork-caption">
+              Fig. 2 — Le Dédale Souterrain des Ombres
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 9: DUNGEON TEXT (Right Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner text-page">
+            <div class="chapter-header">
+              <div class="chapter-number">Chapitre IV</div>
+              <h3 class="chapter-title">La Demeure d'Hulmin</h3>
+            </div>
+            <div class="story-content">
+              <p class="line-highlight">Une fois à l'intérieur de la demeure, nos héros s'adonnèrent à ce qu'ils
+                savaient faire de mieux : combattre. Après plusieurs affrontements musclés contre la garde, ils
+                parvinrent enfin face à Hulmin pour obtenir des réponses et comprendre les sombres machinations qui se
+                trament dans la ville.</p>
+              <p class="line-highlight">Poursuivant leur piste, nos aventuriers se dirigèrent ensuite vers le fameux
+                puits, mais l'accès leur fut refusé : il leur manquait un laissez-passer officiel du grand prêtre.
+                Contraints de rebrousser chemin vers la ville, ils découvrirent alors l'existence d'un étrange trafic de
+                masques s'étendant depuis les égouts jusqu'aux quartiers nobles.</p>
+            </div>
+            <div class="page-footer">
+              — IV —
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 10: DUNGEON PICTURE (Left Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner illustration-page">
+            <div class="artwork-frame">
+              <img src="images/dungeon.jpg" alt="Illustration des Donjons Souterrains">
+            </div>
+            <div class="artwork-caption">
+              Fig. 2 — Le Dédale Souterrain des Ombres
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 11: DUNGEON TEXT (Right Side of Second Spread) -->
+        <div class="page">
+          <div class="page-inner text-page">
+            <div class="chapter-header">
+              <div class="chapter-number">Chapitre V</div>
+              <h3 class="chapter-title">Les Comptes de la Crypte</h3>
+            </div>
+            <div class="story-content">
+              <p class="line-highlight">Sans la moindre hésitation, nos héros s'enfoncèrent dans les méandres des égouts
+                afin de débusquer les trafiquants de masques. Ils y découvrirent un elfe grièvement blessé.</p>
+              <p class="line-highlight">Après lui avoir prodigué les premiers soins, le groupe décida de le mettre en
+                sécurité chez un allié. Ce dernier leur apporta de précieuses révélations : le grand prêtre n'était pas
+                l'homme vertueux qu'il prétendait être, et tout portait à croire qu'il trempait directement dans ce
+                sinistre commerce de masques.</p>
+              <p class="line-highlight">Déterminés à faire toute la lumière sur cette affaire, nos aventuriers
+                regagnèrent les souterrains en empruntant le passage d'une crypte. Là, ils furent pris pour cible par un
+                fantôme redoutable, mais parvinrent à en triompher au terme d'un combat acharné.</p>
+            </div>
+            <div class="page-footer">
+              — V —
+            </div>
+          </div>
+        </div>
+
+        <!-- BACK COVER (Page 6) -->
+        <div class="hard back-cover">
+          <div class="back-cover-content">
+            <div class="back-cover-symbol">🐉</div>
+            <p class="back-cover-text">
+              « Dans l'ombre des donjons et le souffle des dragons s'écrit la légende de Carré. »
+            </p>
+            <div class="cover-subtitle" style="margin-top: auto;">Fin du Tome I</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Interactive Navigation Controls -->
+    <div class="controls-bar">
+      <button id="prev-btn" class="btn-control" title="Page Précédente">
+        <span>◄</span> Précédent
+      </button>
+      <div id="page-number" class="page-indicator">Couverture</div>
+      <button id="next-btn" class="btn-control" title="Page Suivante">
+        Suivant <span>►</span>
+      </button>
+      <button id="sound-toggle" class="btn-control" title="Activer/Désactiver les effets sonores">
+        <span class="sound-icon">🔊</span> <span class="sound-text">Son: Activé</span>
+      </button>
+    </div>
+
+    <!-- Keyboard Navigation Hint -->
+    <div class="keyboard-hint">
+      <span>Astuce: Utilisez les touches</span>
+      <span class="key-badge">◄ Gauche</span>
+      <span>et</span>
+      <span class="key-badge">Droite ►</span>
+      <span>pour tourner les pages</span>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
