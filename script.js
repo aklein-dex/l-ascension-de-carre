@@ -49,8 +49,8 @@ $(document).ready(function () {
 
   // Initialize Turn.js
   $flipbook.turn({
-    width: 920,
-    height: 600,
+    width: 1080,
+    height: 700,
     autoCenter: true,
     elevation: 50,
     gradients: true,

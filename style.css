@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=MedievalSharp&display=swap');
 
 :root {
-  --bg-gradient: radial-gradient(circle at center, #1e1b24 0%, #0d0b10 70%, #050407 100%);
-  --gold-primary: #d4af37;
-  --gold-light: #f3e5ab;
-  --gold-dark: #997a15;
-  --leather-dark: #2b140e;
-  --leather-light: #4a2419;
-  --parchment-base: #f5e6c8;
-  --parchment-shadow: #d8c29d;
-  --text-primary: #2a1f17;
-  --text-accent: #8b0000;
+  --bg-gradient: radial-gradient(circle at center, #1c1522 0%, #0d0914 65%, #040307 100%);
+  --gold-primary: #e5c158;
+  --gold-light: #f8f0d0;
+  --gold-dark: #a8821c;
+  --leather-dark: #240c08;
+  --leather-light: #481a11;
+  --parchment-base: #f7ebd3;
+  --parchment-shadow: #dcc49b;
+  --text-primary: #21160e;
+  --text-accent: #8b1010;
   --border-gold: 2px solid var(--gold-primary);
 }
 
@@ -34,16 +34,17 @@ body {
   position: relative;
 }
 
-/* Ambient fantasy particles / glow */
+/* Ambient fantasy glow & warm golden particle effect */
 body::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
-  height: 90vh;
-  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.07) 0%, rgba(139, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0) 80%);
+  width: 95vw;
+  height: 95vh;
+  background:
+    radial-gradient(ellipse at center, rgba(229, 193, 88, 0.1) 0%, rgba(139, 16, 16, 0.05) 45%, rgba(0, 0, 0, 0) 80%);
   pointer-events: none;
   z-index: 0;
 }
@@ -54,11 +55,11 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 20px;
   z-index: 1;
   width: 100%;
-  max-width: 1200px;
-  padding: 20px;
+  max-width: 1320px;
+  padding: 16px 20px;
 }
 
 .header-title {
@@ -67,98 +68,127 @@ body::before {
 
 .header-title h1 {
   font-family: 'Cinzel', serif;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--gold-primary);
-  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4), 0 2px 4px rgba(0, 0, 0, 0.8);
-  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(229, 193, 88, 0.45), 0 3px 6px rgba(0, 0, 0, 0.9);
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 .header-title p {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.1rem;
-  color: #a0907a;
+  font-size: 1.2rem;
+  color: #b5a388;
   margin-top: 4px;
+  letter-spacing: 1px;
 }
 
 /* Book Wrapper & Turn.js Container */
 .book-wrapper {
   position: relative;
-  perspective: 1500px;
-  padding: 10px;
+  perspective: 1600px;
+  padding: 12px;
 }
 
 #flipbook {
-  width: 920px;
-  height: 600px;
+  width: 1080px;
+  height: 700px;
   margin: 0 auto;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.9),
+    0 0 50px rgba(229, 193, 88, 0.15),
+    inset 0 0 2px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
+  border-radius: 4px;
 }
 
-/* Hard Cover Styling */
+/* Hard Cover Styling - Rich Royal Mahogany Leather */
 #flipbook .hard {
-  background: radial-gradient(circle at 30% 30%, var(--leather-light) 0%, var(--leather-dark) 70%, #150906 100%);
+  background: radial-gradient(circle at 35% 35%, var(--leather-light) 0%, var(--leather-dark) 75%, #120503 100%);
   color: var(--gold-light);
-  border: 1px solid #1a0b07;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8);
+  border: 1px solid #140604;
+  box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.85);
   overflow: hidden;
 }
 
 .cover-content {
   height: 100%;
-  padding: 30px 25px;
+  padding: 35px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 3px double var(--gold-primary);
-  margin: 15px;
-  background: rgba(0, 0, 0, 0.2);
+  border: 4px double var(--gold-primary);
+  margin: 18px;
+  background: rgba(0, 0, 0, 0.25);
   position: relative;
+  border-radius: 4px;
 }
 
+/* Double gold filigree dashed inner border */
 .cover-content::before {
   content: '';
   position: absolute;
-  inset: 6px;
-  border: 1px dashed rgba(212, 175, 55, 0.5);
+  inset: 8px;
+  border: 1px dashed rgba(229, 193, 88, 0.6);
   pointer-events: none;
+}
+
+/* Ornate Gilded Corner Flourishes */
+.cover-content::after {
+  content: '✦';
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 16px;
+  color: var(--gold-primary);
+  text-shadow: 0 0 8px rgba(229, 193, 88, 0.8);
 }
 
 .cover-header {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .cover-subtitle {
   font-family: 'Cinzel', serif;
-  font-size: 0.85rem;
-  letter-spacing: 4px;
+  font-size: 0.95rem;
+  letter-spacing: 5px;
   color: var(--gold-dark);
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .cover-title {
   font-family: 'MedievalSharp', cursive;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   color: var(--gold-primary);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(212, 175, 55, 0.5);
-  line-height: 1.2;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.95), 0 0 15px rgba(229, 193, 88, 0.6);
+  line-height: 1.25;
 }
 
 .cover-image-container {
-  width: 220px;
-  height: 280px;
-  border: 4px double var(--gold-primary);
+  width: 250px;
+  height: 320px;
+  border: 5px double var(--gold-primary);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.3);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.85),
+    0 0 20px rgba(229, 193, 88, 0.4);
   position: relative;
   background: #110805;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cover-image-container:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(229, 193, 88, 0.6);
 }
 
 .cover-image-container img {
@@ -171,30 +201,31 @@ body::before {
 .cover-footer {
   text-align: center;
   font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--gold-light);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Inner Page Parchment Styling */
+/* Inner Page Parchment Styling - Royal Grimoire Parchment */
 #flipbook .page {
   background-color: var(--parchment-base);
-  background-image: 
-    radial-gradient(circle at center, transparent 60%, rgba(139, 105, 20, 0.15) 100%),
-    linear-gradient(to right, rgba(0, 0, 0, 0.15) 0%, transparent 8%, transparent 92%, rgba(0, 0, 0, 0.15) 100%);
+  background-image:
+    radial-gradient(circle at center, transparent 55%, rgba(168, 130, 28, 0.18) 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.16) 0%, transparent 7%, transparent 93%, rgba(0, 0, 0, 0.16) 100%);
   color: var(--text-primary);
   overflow: hidden;
 }
 
-/* Page inner margin & ornate frame */
+/* Page inner margin & ornate gold/crimson frame */
 .page-inner {
   height: 100%;
-  padding: 22px 20px;
+  padding: 24px 26px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgba(139, 105, 20, 0.3);
-  margin: 10px;
+  border: 1px solid rgba(168, 130, 28, 0.38);
+  margin: 12px;
   position: relative;
 }
 
@@ -202,17 +233,18 @@ body::before {
 .page-inner::before {
   content: '✦';
   position: absolute;
-  top: 6px;
-  left: 8px;
-  font-size: 10px;
+  top: 8px;
+  left: 10px;
+  font-size: 12px;
   color: var(--gold-dark);
 }
+
 .page-inner::after {
   content: '✦';
   position: absolute;
-  top: 6px;
-  right: 8px;
-  font-size: 10px;
+  top: 8px;
+  right: 10px;
+  font-size: 12px;
   color: var(--gold-dark);
 }
 
@@ -227,12 +259,13 @@ body::before {
 
 .artwork-frame {
   width: 100%;
-  height: 480px;
-  border: 3px double var(--text-accent);
-  padding: 6px;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.15);
+  height: 560px;
+  border: 4px double var(--text-accent);
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  position: relative;
 }
 
 .artwork-frame img {
@@ -243,13 +276,13 @@ body::before {
 }
 
 .artwork-caption {
-  margin-top: 8px;
+  margin-top: 10px;
   font-family: 'Cinzel', serif;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--text-accent);
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 /* Text Page (Right Side) */
@@ -262,87 +295,137 @@ body::before {
 
 .chapter-header {
   text-align: center;
-  margin-bottom: 10px;
-  border-bottom: 1px solid rgba(139, 0, 0, 0.3);
-  padding-bottom: 6px;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed rgba(139, 16, 16, 0.35);
+  padding-bottom: 8px;
+  position: relative;
 }
 
 .chapter-number {
   font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
-  letter-spacing: 3px;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
   color: var(--text-accent);
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .chapter-title {
   font-family: 'MedievalSharp', cursive;
-  font-size: 1.5rem;
-  color: #1a0f0a;
+  font-size: 1.7rem;
+  color: #1c0e07;
   margin-top: 2px;
 }
 
-/* Story lines */
+/* Story content - Enhanced typography & illuminated drop-caps */
 .story-content {
-  font-size: 0.92rem;
+  font-size: 1.00rem;
   line-height: 1.38;
-  color: #241911;
+  color: #21150e;
   text-align: left;
 }
 
 .story-content p {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   padding: 1px 0;
+}
+
+/* Illuminated Drop-Cap (Lettrine) for chapter opening paragraph */
+.story-content p:first-of-type::first-letter {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2.8rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 8px;
+  margin-top: 4px;
+  color: var(--text-accent);
+  font-weight: bold;
+  text-shadow: 1px 1px 0px var(--gold-primary), 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 .line-highlight {
   display: block;
-  transition: all 0.2s ease;
+  transition: all 0.25 ease;
+  border-radius: 2px;
 }
 
 .line-highlight:hover {
-  background: rgba(212, 175, 55, 0.2);
-  color: #8b0000;
+  background: rgba(229, 193, 88, 0.22);
+  color: #8b1010;
   font-weight: 600;
-  padding-left: 4px;
+  padding-left: 6px;
+}
+
+.page-object-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px auto 2px;
+}
+
+.page-object-img-small {
+  max-width: 150px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35)) drop-shadow(0 0 8px rgba(229, 193, 88, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.page-object-img {
+  max-width: 200px;
+  max-height: 170px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35)) drop-shadow(0 0 8px rgba(229, 193, 88, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.page-object-img:hover {
+  transform: scale(1.08) translateY(-2px);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 14px rgba(229, 193, 88, 0.6));
 }
 
 .page-footer {
   text-align: center;
   font-family: 'Cinzel', serif;
-  font-size: 0.8rem;
-  color: #7a6348;
-  margin-top: 6px;
-  border-top: 1px solid rgba(139, 105, 20, 0.2);
-  padding-top: 4px;
+  font-size: 0.85rem;
+  color: #72593c;
+  margin-top: 8px;
+  border-top: 1px solid rgba(168, 130, 28, 0.25);
+  padding-top: 6px;
+  letter-spacing: 2px;
 }
 
 /* Back Cover */
 .back-cover-content {
   height: 100%;
-  padding: 40px 30px;
+  padding: 45px 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 3px double var(--gold-primary);
-  margin: 15px;
-  gap: 20px;
+  border: 4px double var(--gold-primary);
+  margin: 18px;
+  gap: 24px;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .back-cover-symbol {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--gold-primary);
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  text-shadow: 0 0 15px rgba(229, 193, 88, 0.6);
 }
 
 .back-cover-text {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--gold-light);
-  max-width: 80%;
+  max-width: 85%;
   line-height: 1.6;
 }
 
@@ -351,38 +434,38 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  background: rgba(20, 15, 12, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  gap: 18px;
+  background: rgba(22, 14, 10, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 193, 88, 0.4);
   border-radius: 30px;
-  padding: 10px 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.15);
+  padding: 10px 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(229, 193, 88, 0.18);
 }
 
 .btn-control {
-  background: linear-gradient(135deg, #3a2215 0%, #1e110a 100%);
+  background: linear-gradient(135deg, #422517 0%, #21110a 100%);
   color: var(--gold-primary);
   border: 1px solid var(--gold-dark);
   border-radius: 20px;
-  padding: 8px 18px;
+  padding: 9px 20px;
   font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
 }
 
 .btn-control:hover {
-  background: linear-gradient(135deg, #57331f 0%, #2b180e 100%);
+  background: linear-gradient(135deg, #613722 0%, #301a0f 100%);
   color: var(--gold-light);
   border-color: var(--gold-primary);
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
-  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(229, 193, 88, 0.45);
+  transform: translateY(-2px);
 }
 
 .btn-control:active {
@@ -391,49 +474,79 @@ body::before {
 
 .page-indicator {
   font-family: 'Cinzel', serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--gold-light);
-  min-width: 130px;
+  min-width: 140px;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
 }
 
 .keyboard-hint {
-  font-size: 0.8rem;
-  color: #8a7a68;
-  margin-top: -10px;
+  font-size: 0.85rem;
+  color: #988672;
+  margin-top: -6px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
 .key-badge {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(229, 193, 88, 0.35);
   border-radius: 4px;
-  padding: 2px 6px;
-  font-size: 0.75rem;
+  padding: 2px 7px;
+  font-size: 0.8rem;
   color: var(--gold-light);
 }
 
-/* Responsive adjustments */
-@media (max-width: 980px) {
+/* Responsive Scaling for smaller screens */
+@media (max-width: 1140px) {
+  #flipbook {
+    width: 900px;
+    height: 580px;
+  }
+
+  .artwork-frame {
+    height: 450px;
+  }
+
+  .story-content {
+    font-size: 0.98rem;
+    line-height: 1.4;
+  }
+
+  .cover-title {
+    font-size: 2.2rem;
+  }
+
+  .cover-image-container {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 940px) {
   #flipbook {
     width: 720px;
     height: 480px;
   }
+
+  .artwork-frame {
+    height: 360px;
+  }
+
+  .story-content {
+    font-size: 0.92rem;
+    line-height: 1.38;
+  }
+
   .cover-title {
     font-size: 1.8rem;
   }
+
   .cover-image-container {
-    width: 170px;
-    height: 220px;
-  }
-  .artwork-frame {
-    height: 350px;
-  }
-  .story-content {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    width: 160px;
+    height: 210px;
   }
 }
